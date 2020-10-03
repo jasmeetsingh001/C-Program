@@ -1,0 +1,53 @@
+#include <iostream.h>
+#include <conio.h>
+
+class Teacher
+{
+char Name[20];
+char Subject[10];
+float Basic, DA, HRA;
+float Salary;
+float Calculate()
+{
+Salary = Basic+DA+HRA;
+return Salary;
+}
+
+Public:
+void ReaddataI();
+void Displaydata();
+};
+
+void Teacher::Readdata()
+{
+cout<<"Enter Name :";
+gets(Subject);
+cout<<"Enter Basic :";
+cin>>Basic;
+cout<<"Enter DA :";
+cin>>DA;
+cout<<"Enter HRA :";
+cin>>HRA;
+Calculate();
+}
+
+void Teacher::Displaydata()
+{
+cout<<".....Teacher Deatails....."<<endl;
+cout<<"Name :"<<Name<<endl;
+cout<<"Subject :"<<Subject<<endl;
+cout<<"Basic :"<<Basic<<endl;
+cout<<"DA :"<<DA<<endl;
+cout<<"HRA :"<<HRA<<endl;
+cout<<"Salary :"<<Salary<<endl;
+}
+
+int main()
+{
+clrscr();
+Teacher obj;
+obj.Readdata();
+obj.Displaydata();
+getch();
+return 0;
+}
